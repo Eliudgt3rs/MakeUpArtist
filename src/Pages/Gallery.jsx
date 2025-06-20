@@ -2,16 +2,18 @@ import { motion } from 'framer-motion';
 
 const GalleryPage = () => {
   const gallery = [
+    { src: 'src/Happy Clients/WhatsApp Video 2025-06-21 at 00.20.52_11633a2a.mp4', alt: 'The process' },
+    { src: 'src/Happy Clients/WhatsApp Video 2025-06-21 at 00.20.37_ce4ec2a5.mp4', alt: 'Classic makeup look' },
     { src: 'src/Happy Clients/Image1.jpg', alt: 'Glamour makeup look' },
     { src: 'src/Happy Clients/IMG-20250526-WA0006.jpg', alt: 'Natural makeup look' },
-    { src: 'src/Happy Clients/IMG-20250526-WA0008.jpg', alt: 'Bridal makeup look' },
     { src: 'src/Happy Clients/IMG-20250526-WA0035.jpg', alt: 'Evening makeup look' },
     { src: 'src/Happy Clients/IMG-20250526-WA0011.jpg', alt: 'Bridal makeup look' },
     { src: 'src/Happy Clients/IMG-20250526-WA0015.jpg', alt: 'Editorial makeup look' },
     { src: 'src/Happy Clients/New.jpg', alt: 'Colorful creative makeup' },
     { src: 'src/Happy Clients/IMG-20250526-WA0007.jpg', alt: 'Classic makeup look' },
     { src: 'src/Happy Clients/IMG-20250526-WA0024.jpg', alt: 'Fashion makeup look' },
-    { src: 'src/Happy Clients/IMG-20250526-WA0039.jpg', alt: 'Makeup for photoshoot' }
+    { src: 'src/Happy Clients/IMG-20250526-WA0039.jpg', alt: 'Makeup for photoshoot' },
+  
   ];
 
   return (
@@ -27,23 +29,38 @@ const GalleryPage = () => {
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-          {gallery.map((image, index) => (
-            <motion.div
-              key={index}
-              className="overflow-hidden rounded-2xl shadow-md bg-white"
-              whileHover={{ scale: 1.03, y: -5 }}
-              transition={{ type: 'spring', stiffness: 150 }}
-            >
-              <img
-                src={image.src}
-                alt={image.alt}
-                className="w-full h-64 object-cover transition-transform duration-500 hover:scale-105"
-              />
-              <div className="p-3">
-                <h4 className="text-sm font-medium text-stone-700">{image.alt}</h4>
-              </div>
-            </motion.div>
-          ))}
+          {gallery.map((item, index) => {
+  const isVideo = item.src.endsWith('.mp4');
+
+  return (
+    <motion.div
+      key={index}
+      className="overflow-hidden rounded-2xl shadow-md bg-white"
+      whileHover={{ scale: 1.03, y: -5 }}
+      transition={{ type: 'spring', stiffness: 150 }}
+    >
+      {isVideo ? (
+        <video
+          src={item.src}
+          controls
+          className="w-full h-64 object-cover"
+        >
+          Your browser does not support the video tag.
+        </video>
+      ) : (
+        <img
+          src={item.src}
+          alt={item.alt}
+          className="w-full h-64 object-cover transition-transform duration-500 hover:scale-105"
+        />
+      )}
+      <div className="p-3">
+        <h4 className="text-sm font-medium text-stone-700">{item.alt}</h4>
+      </div>
+    </motion.div>
+  );
+})}
+
 
           {/* Instagram CTA */}
           <motion.div
