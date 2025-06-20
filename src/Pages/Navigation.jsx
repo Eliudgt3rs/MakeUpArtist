@@ -18,7 +18,7 @@ const Navigation = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <Link to="/" className="text-2xl font-semibold text-pink-600">Make up by Barbie</Link>
+          <Link to="/" className="text-2xl font-semibold text-pink-600">Make Up By Barbie</Link>
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-6">
@@ -127,11 +127,11 @@ const Navigation = () => {
                   +254 790 632 614
                 </a>
                 <a 
-                  href="mailto:makeupbybarbie@example.com" 
+                  href="mailto:makeupbybarbie01@example.com" 
                   className="flex items-center text-stone-600 hover:text-pink-600 transition-colors"
                 >
                   <Mail className="w-4 h-4 mr-2" />
-                  makeupbybarbie@example.com
+                  makeupbybarbie01@gmail.com
                 </a>
               </div>
             </div>

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
@@ -11,7 +12,7 @@ const HomePage = () => {
     {
       title: 'Special Occasion',
       description: 'Perfect for parties, photoshoots, and special events',
-      price: 'KSh 4,000'
+      price: 'KSh 4,500'
     },
     {
       title: 'Natural Everyday Look',
@@ -49,23 +50,23 @@ const HomePage = () => {
             transition={{ delay: 0.3 }}
           >
             <h2 className="text-4xl md:text-5xl font-semibold text-stone-800 leading-tight mb-6">
-              Enhance Your Natural Beauty
+              Enhance Your Natural Beauty.
             </h2>
             <p className="text-stone-600 mb-8 text-lg">
-              Professional makeup artistry in Nairobi, Kenya. Specializing in bridal, special occasions, and personal makeup lessons.
+              Professional make up services tailored to your unique style and occasion. From bridal glam to everyday elegance, I bring out the best in you.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-3">
               <Link
                 to="/booking"
-                className="bg-pink-600 text-white px-6 py-3 rounded-4xl shadow-md hover:bg-white hover:text-pink-600 hover:border hover:border-pink-600 transition duration-300 font-semibold"
+                className="bg-pink-600 text-white px-4 py-3 rounded-4xl shadow-md hover:bg-white hover:text-pink-600 hover:border hover:border-pink-600 transition duration-300 font-semibold"
               >
                 Book an Appointment
               </Link>
               <button
                 onClick={handleCall}
-                className="bg-white text-pink-600 px-6 py-3 rounded-4xl shadow-md hover:bg-pink-600 hover:text-white transition duration-300 border border-pink-600 font-semibold"
+                className="bg-white text-pink-600 px-4 rounded-4xl shadow-md hover:bg-pink-600 hover:text-white transition duration-300 border border-pink-600 font-semibold"
               >
-                Call Now
+               📞 Call Now
               </button>
             </div>
           </motion.div>
