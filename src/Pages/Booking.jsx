@@ -27,7 +27,23 @@ const BookingPage = () => {
 
   const whatsappLink = `https://wa.me/254790632614?text=Hello%20Barbie%2C%20I%20would%20like%20to%20book%20a%20${encodeURIComponent(formData.service)}%20appointment%20on%20${encodeURIComponent(formData.date)}%20at%20${encodeURIComponent(formData.time)}.%20My%20name%20is%20${encodeURIComponent(formData.name)}%20and%20my%20phone%20number%20is%20${encodeURIComponent(formData.phone)}.%20Regards.`;
 
-  const emailLink = `mailto:barbaraachieng31@gmail.com?subject=Appointment%20Request%20for%20${encodeURIComponent(formData.service)}&body=Hello%20Barbie%2C%0A%0AI%20would%20like%20to%20book%20a%20${encodeURIComponent(formData.service)}%20appointment%20on%20${encodeURIComponent(formData.date)}%20at%20${encodeURIComponent(formData.time)}.%0A%0AMy%20contact%20details%3A%0AName%3A%20${encodeURIComponent(formData.name)}%0AEmail%3A%20${encodeURIComponent(formData.email)}%0APhone%3A%20${encodeURIComponent(formData.phone)}%0A%0AThank%20you!`;
+  const handleEmailBooking = (e) => {
+  e.preventDefault();
+
+  const { name, email, phone, date, time, service } = formData;
+
+  if (!name || !email || !phone || !date || !time) {
+    alert("Please fill in all required fields before sending an email.");
+    return;
+  }
+
+  const subject = `Appointment Request for ${service}`;
+  const body = `Hello Barbie, I would like to book a ${service} appointment on ${date} at ${time}.My contact details:Name: ${name}Email: ${email}Phone: ${phone}Thank you!`;
+
+  const mailtoLink = `mailto:eliudgachuki130@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+  window.location.href = mailtoLink;
+};
 
   return (
     <div className="py-10 bg-pink-50">
@@ -149,13 +165,14 @@ const BookingPage = () => {
               Book via WhatsApp
             </a>
             
-            <a
-              href={emailLink}
-              className="bg-pink-600 text-white px-6 py-3 rounded-4xl flex items-center justify-center hover:bg-pink-700 transition-colors"
-            >
-              <Mail className="w-5 h-5 mr-2" />
-              Book via Email
-            </a>
+            <button
+  onClick={handleEmailBooking}
+  className="bg-pink-600 text-white px-6 py-3 rounded-4xl flex items-center justify-center hover:bg-pink-700 transition-colors"
+>
+  <Mail className="w-5 h-5 mr-2" />
+  Book via Email
+</button>
+
           </div>
         </div>
       </div>

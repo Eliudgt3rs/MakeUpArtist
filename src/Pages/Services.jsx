@@ -1,99 +1,118 @@
-// Services Page Component
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+
+const serviceVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (i) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.2, duration: 0.6, type: 'spring' },
+  }),
+};
+
 const ServicesPage = () => {
+  const services = [
+    {
+      title: 'Bridal Makeup',
+      price: 'KSh 8,000',
+      state: 'Bridal Makeup',
+      description: 'Looking your absolute best on your special day is our priority. Our bridal package includes:',
+      features: [
+        'Consultation and trial session',
+        'Premium, long-lasting products',
+        'Day-of makeup application',
+        'Touch-up kit for the day',
+      ],
+    },
+    {
+      title: 'Special Occasion',
+      price: 'KSh 4,000',
+      state: 'Special Occasion',
+      description: 'Perfect for parties, events, photoshoots, and special celebrations. This service includes:',
+      features: [
+        'Consultation to determine desired look',
+        'High-quality, camera-friendly makeup',
+        'Lashes (optional)',
+        'Basic touch-up tips',
+      ],
+    },
+    {
+      title: 'Natural Everyday Look',
+      price: 'KSh 2,500',
+      state: 'Natural Everyday Look',
+      description: "A subtle enhancement that's perfect for daily wear or a professional setting:",
+      features: [
+        'Lightweight foundation or tinted moisturizer',
+        'Natural-looking enhancements',
+        'Quick application (approximately 45 minutes)',
+        'Workplace-appropriate options',
+      ],
+    },
+    {
+      title: 'Makeup Class',
+      price: 'KSh 7,500',
+      state: 'Makeup Class',
+      description: 'Learn to create your own stunning looks with a personalized makeup lesson:',
+      features: [
+        '2-hour personal or group session for one week',
+        'Learn techniques customized to your features',
+        'Product recommendations',
+        'Written notes to take home',
+      ],
+    },
+  ];
+
   return (
-    <div className="py-6 bg-pink-50">
+    <motion.div
+      className="py-6 bg-pink-50"
+      initial={{ x: -50, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ delay: 0.3 }}
+    >
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-semibold text-center mb-6">Our Services</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-white p-8 rounded-lg shadow-md">
-            <h3 className="text-2xl font-semibold mb-4 text-pink-600">Bridal Makeup</h3>
-            <p className="text-stone-600 mb-4">
-              Looking your absolute best on your special day is our priority. Our bridal package includes:
-            </p>
-            <ul className="list-disc list-inside mb-4 text-stone-600">
-              <li>Consultation and trial session</li>
-              <li>Premium, long-lasting products</li>
-              <li>Day-of makeup application</li>
-              <li>Touch-up kit for the day</li>
-            </ul>
-            <p className="font-bold text-stone-800 mb-4">KSh 8,000</p>
-            <Link
-              to="/booking"
-              state={{ service: 'Bridal Makeup' }}
-              className="bg-pink-600 text-white px-4 py-2 rounded-4xl hover:bg-pink-700 transition-colors inline-block"
+        <motion.h2
+          className="text-4xl font-semibold text-center mb-6 text-stone-800"
+          initial={{ y: -20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6 }}
+        >
+          Our Services
+        </motion.h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          {services.map((service, i) => (
+            <motion.div
+              key={i}
+              className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow"
+              custom={i}
+              variants={serviceVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.02 }}
             >
-              Book This Service
-            </Link>
-          </div>
-          
-          <div className="bg-white p-8 rounded-lg shadow-md">
-            <h3 className="text-2xl font-semibold mb-4 text-pink-600">Special Occasion</h3>
-            <p className="text-stone-600 mb-4">
-              Perfect for parties, events, photoshoots, and special celebrations. This service includes:
-            </p>
-            <ul className="list-disc list-inside mb-4 text-stone-600">
-              <li>Consultation to determine desired look</li>
-              <li>High-quality, camera-friendly makeup</li>
-              <li>Lashes (optional)</li>
-              <li>Basic touch-up tips</li>
-            </ul>
-            <p className="font-bold text-stone-800 mb-4">KSh 4,000</p>
-            <Link
-              to="/booking"
-              state={{ service: 'Special Occasion' }}
-              className="bg-pink-600 text-white px-4 py-2 rounded-4xl hover:bg-pink-700 transition-colors inline-block"
-            >
-              Book This Service
-            </Link>
-          </div>
-          
-          <div className="bg-white p-8 rounded-lg shadow-md">
-            <h3 className="text-2xl font-semibold mb-4 text-pink-600">Natural Everyday Look</h3>
-            <p className="text-stone-600 mb-4">
-              A subtle enhancement that's perfect for daily wear or a professional setting:
-            </p>
-            <ul className="list-disc list-inside mb-4 text-stone-600">
-              <li>Lightweight foundation or tinted moisturizer</li>
-              <li>Natural-looking enhancements</li>
-              <li>Quick application (approximately 45 minutes)</li>
-              <li>Workplace-appropriate options</li>
-            </ul>
-            <p className="font-bold text-stone-800 mb-4">KSh 2,500</p>
-            <Link
-              to="/booking"
-              state={{ service: 'Natural Everyday Look' }}
-              className="bg-pink-600 text-white px-4 py-2 rounded-4xl hover:bg-pink-700 transition-colors inline-block"
-            >
-              Book This Service
-            </Link>
-          </div>
-          
-          <div className="bg-white p-8 rounded-lg shadow-md">
-            <h3 className="text-2xl font-semibold mb-4 text-pink-600">Makeup Class</h3>
-            <p className="text-stone-600 mb-4">
-              Learn to create your own stunning looks with a personalized makeup lesson:
-            </p>
-            <ul className="list-disc list-inside mb-4 text-stone-600">
-              <li>2-hour personal or group session for one week</li>
-              <li>Learn techniques customized to your features</li>
-              <li>Product recommendations</li>
-              <li>Written notes to take home</li>
-            </ul>
-            <p className="font-bold text-stone-800 mb-4">KSh 7,500</p>
-            <Link
-              to="/booking"
-              state={{ service: 'Makeup Class' }}
-              className="bg-pink-600 text-white px-4 py-2 rounded-4xl hover:bg-pink-700 transition-colors inline-block"
-            >
-              Book This Service
-            </Link>
-          </div>
+              <h3 className="text-2xl font-semibold mb-4 text-pink-600">{service.title}</h3>
+              <p className="text-stone-600 mb-4">{service.description}</p>
+              <ul className="list-disc list-inside mb-4 text-stone-600">
+                {service.features.map((feature, idx) => (
+                  <li key={idx}>{feature}</li>
+                ))}
+              </ul>
+              <p className="font-bold text-stone-800 mb-4">{service.price}</p>
+              <Link
+                to="/booking"
+                state={{ service: service.state }}
+                className="bg-pink-600 text-white px-5 py-2 rounded-full hover:bg-pink-700 transition-colors font-semibold"
+              >
+                Book This Service
+              </Link>
+            </motion.div>
+          ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
 export default ServicesPage;
-import React from 'react';
-import { Link } from 'react-router-dom';
