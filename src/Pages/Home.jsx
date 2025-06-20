@@ -26,6 +26,19 @@ const HomePage = () => {
     }
   ];
 
+  const handleCall = async () => {const phoneNumber = "+254790632614";
+      try {
+        await navigator.clipboard.writeText(phoneNumber);
+        alert("Phone number copied to clipboard!");
+
+        // Trigger phone dialer
+        window.location.href = `tel:${phoneNumber}`;
+      } catch (err) {
+        console.error("Failed to copy number: ", err);
+        alert("Failed to copy phone number.");
+      }
+    };
+
   return (
     <div>
       {/* Hero Section */}
@@ -42,6 +55,12 @@ const HomePage = () => {
             >
               Book an Appointment
             </Link>
+             <button
+              onClick={handleCall}
+              className="bg-pink-600 text-white px-6 py-3 rounded-4xl shadow-md hover:bg-pink-700 transition-colors inline-block"
+            >
+              Call Now
+            </button>
           </div>
           <div className="md:w-1/2">
             <img 
