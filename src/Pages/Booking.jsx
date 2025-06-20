@@ -27,7 +27,7 @@ const BookingPage = () => {
 
   const whatsappLink = `https://wa.me/254790632614?text=Hello%20Barbie%2C%20I%20would%20like%20to%20book%20a%20${encodeURIComponent(formData.service)}%20appointment%20on%20${encodeURIComponent(formData.date)}%20at%20${encodeURIComponent(formData.time)}.%20My%20name%20is%20${encodeURIComponent(formData.name)}%20and%20my%20phone%20number%20is%20${encodeURIComponent(formData.phone)}.%20Regards.`;
 
-  const emailLink = `mailto:makeupbybarbie@gmail.com?subject=Appointment%20Request%20for%20${encodeURIComponent(formData.service)}&body=Hello%20Barbie%2C%0A%0AI%20would%20like%20to%20book%20a%20${encodeURIComponent(formData.service)}%20appointment%20on%20${encodeURIComponent(formData.date)}%20at%20${encodeURIComponent(formData.time)}.%0A%0AMy%20contact%20details%3A%0AName%3A%20${encodeURIComponent(formData.name)}%0AEmail%3A%20${encodeURIComponent(formData.email)}%0APhone%3A%20${encodeURIComponent(formData.phone)}%0A%0AThank%20you!`;
+  const emailLink = `mailto:barbaraachieng31@gmail.com?subject=Appointment%20Request%20for%20${encodeURIComponent(formData.service)}&body=Hello%20Barbie%2C%0A%0AI%20would%20like%20to%20book%20a%20${encodeURIComponent(formData.service)}%20appointment%20on%20${encodeURIComponent(formData.date)}%20at%20${encodeURIComponent(formData.time)}.%0A%0AMy%20contact%20details%3A%0AName%3A%20${encodeURIComponent(formData.name)}%0AEmail%3A%20${encodeURIComponent(formData.email)}%0APhone%3A%20${encodeURIComponent(formData.phone)}%0A%0AThank%20you!`;
 
   return (
     <div className="py-10 bg-pink-50">
