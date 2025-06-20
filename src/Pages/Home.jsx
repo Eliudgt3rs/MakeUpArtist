@@ -57,7 +57,7 @@ const HomePage = () => {
             </Link>
              <button
               onClick={handleCall}
-              className="bg-pink-600 text-white px-6 py-3 rounded-4xl font-semibold shadow-md hover:bg-pink-700 transition-colors inline-block"
+              className="bg-pink-600 text-white px-6 py-3 rounded-4xl font-semibold shadow-md hover:bg-pink-700 transition-colors inline-block ml-4"
             >
               Call Now
             </button>
