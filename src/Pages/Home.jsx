@@ -26,10 +26,7 @@ const HomePage = () => {
     }
   ];
 
-
-    
-
-    const handleCall = async () => {const phoneNumber = "+254790632614";
+  const handleCall = async () => {const phoneNumber = "+254790632614";
       try {
         await navigator.clipboard.writeText(phoneNumber);
         alert("Phone number copied to clipboard!");
@@ -41,7 +38,6 @@ const HomePage = () => {
         alert("Failed to copy phone number.");
       }
     };
-  
 
   return (
     <div>
@@ -59,7 +55,7 @@ const HomePage = () => {
             >
               Book an Appointment
             </Link>
-            <button
+             <button
               onClick={handleCall}
               className="bg-pink-600 text-white px-6 py-3 rounded-4xl shadow-md hover:bg-pink-700 transition-colors inline-block"
             >
