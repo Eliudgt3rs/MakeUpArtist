@@ -52,7 +52,7 @@ const HomePage = () => {
             <h2 className="text-4xl md:text-5xl font-semibold text-stone-800 leading-tight mb-6">
               Enhance Your Natural Beauty.
             </h2>
-            <p className="text-stone-600 mb-8 text-lg">
+            <p className="text-stone-600 font-semibold mb-8 text-lg">
               Professional make up services tailored to your unique style and occasion. From bridal glam to everyday elegance, I bring out the best in you.
             </p>
             <div className="flex flex-wrap gap-3">

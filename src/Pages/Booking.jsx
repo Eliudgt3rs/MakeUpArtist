@@ -175,7 +175,7 @@ const BookingPage = () => {
               href={whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-green-600 text-white px-6 py-3 rounded-4xl flex items-center justify-center hover:bg-green-700 transition-colors"
+              className="bg-green-600 font-semibold text-white px-6 py-3 rounded-4xl flex items-center justify-center hover:bg-green-700 transition-colors"
             >
               <svg
                 className="w-5 h-5 mr-2"
@@ -190,7 +190,7 @@ const BookingPage = () => {
 
             <button
               onClick={handleEmailBooking}
-              className="bg-pink-600 text-white px-6 py-3 rounded-4xl flex items-center justify-center hover:bg-pink-700 transition-colors"
+              className="bg-pink-600 font-semibold text-white px-6 py-3 rounded-4xl flex items-center justify-center hover:bg-pink-700 transition-colors"
             >
               <Mail className="w-5 h-5 mr-2" />
               Book via Email

@@ -14,7 +14,7 @@ const Navigation = () => {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <nav className="bg-white shadow-md relative z-50">
+    <nav className="bg-white shadow-md relative z-50 font-semibold">
       <div className="container mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
@@ -65,7 +65,7 @@ const Navigation = () => {
         </div>
         
         {/* Mobile Dropdown Menu */}
-        <div className={`md:hidden z-20 sticky:top-0 transition-all duration-300 ease-in-out ${
+        <div className={`md:hidden font-semibold z-20 sticky:top-0 transition-all duration-300 ease-in-out ${
           isMobileMenuOpen 
             ? 'max-h-96 opacity-100 mt-4' 
             : 'max-h-0 opacity-0 overflow-hidden mt-0'
