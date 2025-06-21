@@ -1,6 +1,11 @@
 /* eslint-disable no-unused-vars */
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
+<Helmet>
+  <title>Gallery – Makeup by Barbie</title>
+  <meta name="description" content="View beautiful glam and bridal makeup work by Barbie." />
+</Helmet>
 
 const HomePage = () => {
   const services = [
