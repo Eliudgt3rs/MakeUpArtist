@@ -3,17 +3,17 @@ import { motion } from 'framer-motion';
 
 const GalleryPage = () => {
   const gallery = [
-    { src: 'src/HappyClients/WhatsAppVideo2025-06-21at00.20.52_11633a2a.mp4', alt: 'The process' },
-    { src: 'src/HappyClients/WhatsAppVideo2025-06-21at00.20.37_ce4ec2a5.mp4', alt: 'Classic makeup look' },
-    { src: 'src/HappyClients/Image1.jpg', alt: 'Glamour makeup look' },
-    { src: 'src/HappyClients/IMG-20250526-WA0006.jpg', alt: 'Natural makeup look' },
-    { src: 'src/HappyClients/IMG-20250526-WA0035.jpg', alt: 'Evening makeup look' },
-    { src: 'src/HappyClients/IMG-20250526-WA0011.jpg', alt: 'Bridal makeup look' },
-    { src: 'src/HappyClients/IMG-20250526-WA0015.jpg', alt: 'Editorial makeup look' },
-    { src: 'src/HappyClients/New.jpg', alt: 'Colorful creative makeup' },
-    { src: 'src/HappyClients/IMG-20250526-WA0007.jpg', alt: 'Classic makeup look' },
-    { src: 'src/HappyClients/IMG-20250526-WA0024.jpg', alt: 'Fashion makeup look' },
-    { src: './HappyClients/IMG-20250526-WA0039.jpg', alt: 'Makeup for photoshoot' },
+    { src: 'WhatsAppVideo2025-06-21at00.20.52_11633a2a.mp4', alt: 'The process' },
+    { src: 'WhatsAppVideo2025-06-21at00.20.37_ce4ec2a5.mp4', alt: 'Classic makeup look' },
+    { src: 'Image1.jpg', alt: 'Glamour makeup look' },
+    { src: 'IMG-20250526-WA0006.jpg', alt: 'Natural makeup look' },
+    { src: 'IMG-20250526-WA0035.jpg', alt: 'Evening makeup look' },
+    { src: 'IMG-20250526-WA0011.jpg', alt: 'Bridal makeup look' },
+    { src: 'IMG-20250526-WA0015.jpg', alt: 'Editorial makeup look' },
+    { src: 'New.jpg', alt: 'Colorful creative makeup' },
+    { src: 'IMG-20250526-WA0007.jpg', alt: 'Classic makeup look' },
+    { src: 'IMG-20250526-WA0024.jpg', alt: 'Fashion makeup look' },
+    { src: 'IMG-20250526-WA0039.jpg', alt: 'Makeup for photoshoot' },
   
   ];
 

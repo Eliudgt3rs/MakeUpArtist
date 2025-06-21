@@ -77,7 +77,7 @@ const HomePage = () => {
             transition={{ delay: 0.5 }}
           >
             <img
-              src="src/HappyClients/IMG-20250526-WA0030.jpg"
+              src="IMG-20250526-WA0030.jpg"
               alt="Makeup by Barbie"
               className="rounded-3xl shadow-xl hover:scale-105 transition-transform duration-500"
             />
