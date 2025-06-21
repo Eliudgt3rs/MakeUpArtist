@@ -73,7 +73,7 @@ const Footer = () => {
                 <Phone className="w-4 h-4 mr-2" />
                 +254 790 632 614
               </p>
-              <p className="text-stone-300 mb-4 flex items-center">
+              <p className="text-stone-300 mb-6 flex items-center">
                 <Mail className="w-4 h-4 mr-2" />
                 makeupbybarbie@gmail.com
               </p>
