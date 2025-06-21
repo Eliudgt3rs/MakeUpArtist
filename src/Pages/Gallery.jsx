@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { motion } from 'framer-motion';
 
-
 const GalleryPage = () => {
   const gallery = [
     { src: 'src/HappyClients/WhatsAppVideo2025-06-21at00.20.52_11633a2a.mp4', alt: 'The process' },
