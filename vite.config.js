@@ -8,5 +8,5 @@ export default defineConfig({
   plugins: [
     tailwindcss(),
     react()],
-  //base: process.env.VITE_BASE_PATH || '/MakeUpArtist'
+  base: process.env.VITE_BASE_PATH || '/MakeUpArtist'
 })
